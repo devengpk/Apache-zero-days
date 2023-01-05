@@ -1,13 +1,7 @@
 # CVE-2022-33891
 Apache Spark Shell Command Injection Vulnerability
 
-A Python POC for exploiting the Apache Spark Shell Command Injection vulnerability. I saw some other POCs out there but they looked mega sus. This one is clean and simple.
-
-I did not discover this exploit/vulnerability. I just wanted to make a safe POC for the community ^.^
-
-CVE originally discovered by Kostya Kortchinsky from Databricks.
-
-Update 9/7/22: Ayo there's a Metasploit module for this now! Made by [h00die-gr3y](https://github.com/h00die-gr3y) and is now [merged!](https://github.com/rapid7/metasploit-framework/pull/16944)
+A Python POC for exploiting the Apache Spark Shell Command Injection vulnerability.
 
 ## Affected Versions
 Apache Spark versions 3.0.3 and earlier, versions 3.1.1 to 3.1.2, and versions 3.2.0 to 3.2.1
@@ -160,5 +154,4 @@ Peep the license.
 - https://securityonline.info/cve-2022-33891-apache-spark-shell-command-injection-vulnerability/
 - https://nvd.nist.gov/vuln/detail/CVE-2022-33891
 - https://spark.apache.org/docs/2.1.0/configuration.html
-- https://github.com/W01fh4cker/cve-2022-33891 (I do not recommend using this POC)
 
